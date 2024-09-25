@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .right-container {
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        .section {
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+        @media (max-width: 576px) {
+            .left-container {
+                height: 18vh !important;
+            }
+            .right-container {
+                height: 82vh !important;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+            }
+            .section {
+                height: 82vh;
+                scroll-snap-align: start;
+            }
+            .left-container h1 {
+                font-size: 1.5rem; /* Adjust font size for small screens */
+            }
+            .left-container h2 {
+                font-size: 1rem; /* Adjust font size for small screens */
+            }
+            .left-container ul {
+                margin-top: 1rem !important; /* Add margin to ensure visibility */
+            }
+            .left-container ul li {
+                font-size: 0.9rem; /* Adjust font size for list items on small screens */
+            }
+            .left-container img {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row vh-100">
+            <div class="col-12 col-md-4 h-100 left-container d-flex flex-column align-items-start justify-content-center" style="background-color: lightblue;">
+                <!-- Left container (33%) -->
+                <div class="text-center w-100">
+                    <img src="path/to/your/image.jpg" alt="Profile Image" class="img-fluid mb-3">
+                    <h1 class="fs-4 fs-md-3 mt-4">Dimitri Lindsey</h1>
+                    <h2 class="fs-2 fs-md-1">BIT Web Developer</h2>
+                </div>
+                <ul class="list-unstyled d-flex flex-row flex-sm-column justify-content-around w-100 mt-3 text-center custom-font-size">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Experience</li>
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8 h-100 right-container" style="background-color: lightgreen;">
+                <!-- Right container (66%) -->
+                <div class="section" style="background-color: lightcoral;">Home Section</div>
+                <div class="section" style="background-color: lightgoldenrodyellow;">About Section</div>
+                <div class="section" style="background-color: lightpink;">Experience Section</div>
+                <div class="section" style="background-color: lightseagreen;">Portfolio Section</div>
+                <div class="section" style="background-color: lightskyblue;">Contact Section</div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
