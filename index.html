@@ -20,12 +20,12 @@
                 height: 18vh !important;
             }
             .right-container {
-                height: 82vh !important;
+                height: calc(100vh - 18vh) !important; /* Adjust height to fill remaining space */
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
             }
             .section {
-                height: 82vh;
+                height: calc(100vh - 18vh); /* Adjust height to fill remaining space */
                 scroll-snap-align: start;
             }
             .left-container h1 {
