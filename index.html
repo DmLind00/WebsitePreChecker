@@ -49,8 +49,8 @@
 <body>
     <div class="container-fluid vh-100">
         <div class="row vh-100">
-            <div class="col-12 col-md-4 h-100 left-container d-flex flex-column align-items-start justify-content-center" style="background-color: lightblue;">
-                <!-- Left container (33%) -->
+            <nav class="col-12 h-100 d-flex flex-column align-items-start justify-content-center">
+                <!-- Left container (18vh) -->
                 <div class="text-center w-100">
                     <img src="path/to/your/image.jpg" alt="Profile Image" class="img-fluid mb-3">
                     <h1 class="fs-4 fs-md-3 mt-4">Dimitri Lindsey</h1>
@@ -63,9 +63,9 @@
                     <li>Portfolio</li>
                     <li>Contact</li>
                 </ul>
-            </div>
-            <div class="col-12 col-md-8 h-100 right-container" style="background-color: lightgreen;">
-                <!-- Right container (66%) -->
+            </nav>
+            <div class="col-12 h-100 right-container" style="background-color: lightgreen;">
+                <!-- Right container (82vh) -->
                 <div class="section" style="background-color: lightcoral;">Home Section</div>
                 <div class="section" style="background-color: lightgoldenrodyellow;">About Section</div>
                 <div class="section" style="background-color: lightpink;">Experience Section</div>
@@ -78,5 +78,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelector('.right-container').addEventListener('scroll', function() {
+            const container = this;
+            const scrollTop = container.scrollTop;
+            const scrollHeight = container.scrollHeight;
+            const clientHeight = container.clientHeight;
+
+            if (scrollTop === 0) {
+                console.log('Reached the top of the container');
+            } else if (scrollTop + clientHeight >= scrollHeight) {
+                console.log('Reached the bottom of the container');
+            }
+        });
+    </script>
 </body>
 </html>
