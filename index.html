@@ -7,25 +7,42 @@
     <!-- Include Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        :root {
+            --navbar-height: 18vh;
+        }
+        
+        .left-container {
+            height: var(--navbar-height);
+            background-color: lightblue;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
         .right-container {
+            margin-top: var(--navbar-height);
+            height: calc(100vh - var(--navbar-height));
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
         }
+        
         .section {
-            height: 100vh;
+            height: calc(100vh - var(--navbar-height));
             scroll-snap-align: start;
         }
+        
         @media (max-width: 576px) {
             .left-container {
-                height: 18vh !important;
+                height: var(--navbar-height) !important;
             }
             .right-container {
-                height: calc(100dvh - 18vh) !important; /* Adjust height to fill remaining space */
+                height: calc(100vh - var(--navbar-height)) !important; /* Adjust height to fill remaining space */
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
             }
             .section {
-                height: calc(100dvh - 18vh); /* Adjust height to fill remaining space */
+                height: calc(100vh - var(--navbar-height)); /* Adjust height to fill remaining space */
                 scroll-snap-align: start;
             }
             .left-container h1 {
@@ -49,10 +66,10 @@
 <body>
     <div class="container-fluid vh-100">
         <div class="row vh-100">
-            <div class="col-12 col-md-4 h-100 left-container d-flex flex-column align-items-start justify-content-center" style="background-color: lightblue;">
-                <!-- Left container (33%) -->
+            <div class="col-12 left-container d-flex flex-column align-items-start justify-content-center">
+                <!-- Left container (18vh) -->
                 <div class="text-center w-100">
-                    <img src="images/me.png" alt="Profile Image" class="img-fluid mb-3">
+                    <img src="path/to/your/image.jpg" alt="Profile Image" class="img-fluid mb-3">
                     <h1 class="fs-4 fs-md-3 mt-4">Dimitri Lindsey</h1>
                     <h2 class="fs-2 fs-md-1">BIT Web Developer</h2>
                 </div>
@@ -64,8 +81,8 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            <div class="col-12 col-md-8 h-100 right-container" style="background-color: lightgreen;">
-                <!-- Right container (66%) -->
+            <div class="col-12 right-container">
+                <!-- Right container (82vh) -->
                 <div class="section" style="background-color: lightcoral;">Home Section</div>
                 <div class="section" style="background-color: lightgoldenrodyellow;">About Section</div>
                 <div class="section" style="background-color: lightpink;">Experience Section</div>
@@ -80,5 +97,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
