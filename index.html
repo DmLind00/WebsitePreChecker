@@ -8,7 +8,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
-            --navbar-height: 15vh;
+            --navbar-height: 15dvh;
         }
         
         .left-container {
@@ -28,7 +28,7 @@
         }
         
         .section {
-            height: calc(100vh - var(--navbar-height));
+            height: calc(100dvh - var(--navbar-height));
             scroll-snap-align: start;
         }
         
@@ -37,12 +37,12 @@
                 height: var(--navbar-height) !important;
             }
             .right-container {
-                height: calc(100vh - var(--navbar-height)) !important; /* Adjust height to fill remaining space */
+                height: calc(100dvh - var(--navbar-height)) !important; /* Adjust height to fill remaining space */
                 overflow-y: scroll;
                 scroll-snap-type: y mandatory;
             }
             .section {
-                height: calc(100vh - var(--navbar-height)); /* Adjust height to fill remaining space */
+                height: calc(100dvh - var(--navbar-height)); /* Adjust height to fill remaining space */
                 scroll-snap-align: start;
             }
             .left-container h1 {
@@ -64,8 +64,8 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid vh-100">
-        <div class="row vh-100">
+    <div class="container-fluid dvh-100">
+        <div class="row dvh-100">
             <div class="col-12 left-container d-flex flex-column align-items-start justify-content-center">
                 <!-- Left container (18vh) -->
                 <div class="text-center w-100">
@@ -74,7 +74,7 @@
                     <h2 class="fs-2 fs-md-1">BIT Web Developer</h2>
                 </div>
                 <ul class="list-unstyled d-flex flex-row flex-sm-column justify-content-around w-100 mt-3 text-center custom-font-size">
-                    <li>Home</li>
+                    <li >Home</li>
                     <li>About</li>
                     <li>Experience</li>
                     <li>Portfolio</li>
