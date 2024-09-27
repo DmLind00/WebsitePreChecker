@@ -1,0 +1,388 @@
+.overView{
+    display: flex;
+    flex-direction: column;
+}
+
+.navSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 18dvh;
+    width: 100%;
+    background-color: red;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.myName {
+    font-size: 20px;
+    color: black;
+}
+
+.myMajor {
+    font-size: 18px;
+    color: black;
+}
+
+.navRefs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.mainPage {
+    text-align: center;
+    height: calc(100vh - 18dvh); /* Adjust height to fill remaining space */
+    width: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory; /* Enable scroll snapping */
+    scroll-padding-top: 18dvh; /* Account for the fixed navSection */
+}
+
+.aboutCard, .experienceCard, .portfolioCard, .contactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 18dvh); /* Ensure each section takes up the full viewport height */
+    scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+    background-color: #f1f1f1;
+    border: 3px solid black;
+    margin: 0; /* Ensure no extra margin */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) {
+    /* Add your responsive styles here */
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+body{
+    overflow: hidden;
+}
+
+.overView{
+    display: flex;
+    flex-direction: row;
+}
+
+.navSection{
+    text-align: center;
+    height: 100vh;
+    width: 33%;
+    background-color: red;
+}
+
+.mainPage{
+    text-align: center;
+    height: 100vh;
+    width: 67%;
+    overflow-y: auto;
+    scroll-snap-type: mandatory;
+    scroll-snap-align: start;
+}
+
+.mainPage {
+    text-align: center;
+    height: 100vh;
+    width: 67%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory; /* Set scroll-snap-type on the parent */
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.aboutCard, .experienceCard, .portfolioCard, .contactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100dvh; /* Ensure each section takes up the full viewport height */
+    scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+    background-color: #f1f1f1;
+    border: 3px solid black;
+    margin: 0 0 0 0;
+}
+
+header{
+    font-size: 30px;
+}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    body{
+        overflow: hidden;
+    }
+    
+    .overView{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navSection{
+        text-align: center;
+        height: 100vh;
+        width: 33%;
+        background-color: red;
+    }
+    
+    .mainPage{
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: mandatory;
+        scroll-snap-align: start;
+    }
+    
+    .mainPage {
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory; /* Set scroll-snap-type on the parent */
+    }
+    
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .aboutCard, .experienceCard, .portfolioCard, .contactCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100dvh; /* Ensure each section takes up the full viewport height */
+        scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+        background-color: #f1f1f1;
+        border: 3px solid black;
+        margin: 0 0 0 0;
+    }
+    
+    header{
+        font-size: 30px;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    body{
+        overflow: hidden;
+    }
+    
+    .overView{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navSection{
+        text-align: center;
+        height: 100vh;
+        width: 33%;
+        background-color: red;
+    }
+    
+    .mainPage{
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: mandatory;
+        scroll-snap-align: start;
+    }
+    
+    .mainPage {
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory; /* Set scroll-snap-type on the parent */
+    }
+    
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .aboutCard, .experienceCard, .portfolioCard, .contactCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100dvh; /* Ensure each section takes up the full viewport height */
+        scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+        background-color: #f1f1f1;
+        border: 3px solid black;
+        margin: 0 0 0 0;
+    }
+    
+    header{
+        font-size: 30px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    body{
+        overflow: hidden;
+    }
+    
+    .overView{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navSection{
+        text-align: center;
+        height: 100vh;
+        width: 33%;
+        background-color: red;
+    }
+    
+    .mainPage{
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: mandatory;
+        scroll-snap-align: start;
+    }
+    
+    .mainPage {
+        text-align: center;
+        height: 100vh;
+        width: 67%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory; /* Set scroll-snap-type on the parent */
+    }
+    
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .aboutCard, .experienceCard, .portfolioCard, .contactCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100dvh; /* Ensure each section takes up the full viewport height */
+        scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+        background-color: #f1f1f1;
+        border: 3px solid black;
+        margin: 0 0 0 0;
+    }
+    
+    header{
+        font-size: 30px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+body{
+    overflow: hidden;
+}
+
+.overView{
+    display: flex;
+    flex-direction: row;
+}
+
+.navSection{
+    text-align: center;
+    height: 100vh;
+    width: 33%;
+    background-color: red;
+}
+
+.mainPage{
+    text-align: center;
+    height: 100vh;
+    width: 67%;
+    overflow-y: auto;
+    scroll-snap-type: mandatory;
+    scroll-snap-align: start;
+}
+
+.mainPage {
+    text-align: center;
+    height: 100vh;
+    width: 67%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory; /* Set scroll-snap-type on the parent */
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.aboutCard, .experienceCard, .portfolioCard, .contactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100dvh; /* Ensure each section takes up the full viewport height */
+    scroll-snap-align: start; /* Set scroll-snap-align on the child elements */
+    background-color: #f1f1f1;
+    border: 3px solid black;
+    margin: 0 0 0 0;
+}
+
+header{
+    font-size: 30px;
+}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

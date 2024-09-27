@@ -4,103 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --navbar-height: 18vh;
-        }
-        
-        .left-container {
-            height: var(--navbar-height);
-            background-color: lightblue;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .right-container {
-            margin-top: var(--navbar-height);
-            height: calc(100vh - var(--navbar-height));
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
-        
-        .section {
-            height: calc(100vh - var(--navbar-height));
-            scroll-snap-align: start;
-        }
-
-        .custom-font-size{
-            flex-direction: row;
-            align-self: center;
-            
-
-        }
-        
-        @media (max-width: 576px) {
-            .left-container {
-                height: var(--navbar-height) !important;
-            }
-            .right-container {
-                height: calc(100vh - var(--navbar-height)) !important; /* Adjust height to fill remaining space */
-                overflow-y: scroll;
-                scroll-snap-type: y mandatory;
-            }
-            .section {
-                height: calc(100vh - var(--navbar-height)); /* Adjust height to fill remaining space */
-                scroll-snap-align: start;
-            }
-            .left-container h1 {
-                font-size: 1.5rem; /* Adjust font size for small screens */
-            }
-            .left-container h2 {
-                font-size: 1rem; /* Adjust font size for small screens */
-            }
-            .left-container ul {
-                margin-top: 1rem !important; /* Add margin to ensure visibility */
-            }
-            .left-container ul li {
-                font-size: 0.9rem; /* Adjust font size for list items on small screens */
-            }
-            .left-container img {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container-fluid vh-100">
-        <div class="row vh-100">
-            <div class="col-12 left-container d-flex flex-column align-items-start justify-content-center">
-                <!-- Left container (18vh) -->
-                <div class="text-center w-100 flex">
-                    <img src="path/to/your/image.jpg" alt="Profile Image" class="img-fluid mb-3">
-                    <h1 class="fs-4 fs-md-3 mt-4">Dimitri Lindsey</h1>
-                    <h2 class="fs-2 fs-md-1">BIT Web Developer</h2>
-                </div>
-                <ul class="list-unstyled d-flex custom-font-size">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-12 right-container">
-                <!-- Right container (82vh) -->
-                <div id="home" class="section" style="background-color: lightcoral;">Home Section</div>
-                <div id="about" class="section" style="background-color: lightgoldenrodyellow;">About Section</div>
-                <div id="experience" class="section" style="background-color: lightpink;">Experience Section</div>
-                <div id="portfolio" class="section" style="background-color: lightseagreen;">Portfolio Section</div>
-                <div id="contact" class="section" style="background-color: lightskyblue;">Contact Section</div>
+    <div class="overView">
+        <div class="navSection">
+            <img src="" alt="">
+            <p class="myName">Dimtri Lindsey</p>
+            <p class="myMajor">Bit Major</p>
+            <div class="navRefs">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
+        <div class="mainPage">
+            <section class="aboutCard">
+                <header>About:</header>
+
+            </section>
+            <section class="experienceCard">
+                <header>Experience:</header>
+
+
+            </section>
+            <section class="portfolioCard">
+                <header>Portfolio:</header>
+
+            </section>
+            <section class="contactCard">
+                <header>Contact:</header>
+
+            </section>
+        </div>
     </div>
-    <!-- Include Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
